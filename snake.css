@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  /* background: url(https://wallpapercave.com/dwp1x/wp3906260.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#board {
+  
+  width: 90vmin;
+  height: 90vmin;
+  display: flex;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(18, 1fr);
+  right: 45px;
+  /* background-size: 300% 300%; */
+  position: relative;
+  background-image: linear-gradient(#03f55c, #0e5cad);
+}
+/*  */
+.snake {
+  /* background-color: purple; */
+  border: 2px solid rgb(151, 2, 151);
+  border-radius: 10px;
+}
+.food {
+  /* background-color: black; */
+  border: 2px solid rgb(219, 0, 0);
+  border-radius: 8px;
+}
+#scoreBox {
+  position: absolute;
+  top: 35px;
+  /* right: 10%; */
+  font-size: 40px;
+  right: 50px;
+  color: white;
+}
+#hiscoreBox {
+  position: absolute;
+  top: 80px;
+  /* right: 10%; */
+  font-size: 40px;
+  right: 50px;
+  color: white;
+}
+.head {
+  background: rgb(41, 0, 41);
+  border-radius: 15px;
+}
+.food {
+  background: red;
+}
+.snake {
+  background: purple;
+}
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(
+    -60deg,
+    rgb(7, 213, 100) 50%,
+    rgb(6, 67, 211) 50%
+  );
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+.heading{
+  display: flex;
+  flex-direction: column;
+
+}
+.snake1{
+  width: 100px;
+  position: relative;
+    left: -225px;
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 110px;
+}
+.mania{
+  font-size: 110px;
+    position: relative;
+    left: -140px;
+    top: -50px;
+    width: 310px;
+    font-family: 'Bagel Fat One', cursive;
+}
